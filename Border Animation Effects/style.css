@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+}
+.box {
+  position: relative;
+  border-radius: 100%;
+  width: 30rem;
+  height: 30rem;
+  background: red;
+}
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  background: repeating-conic-gradient(
+    #7f00ff 0%,
+    #4b0082 5%,
+    #0000ff 10%,
+    #008000 15%,
+    #ffff00 20%,
+    #ffa500 25%,
+    #ff0000 30%
+  );
+  animation: animateRotate 10s linear infinite;
+}
+
+@keyframes animateRotate {
+  0% {
+    rotate: calc(0deg);
+  }
+  100% {
+    rotate: calc(360deg);
+  }
+}
