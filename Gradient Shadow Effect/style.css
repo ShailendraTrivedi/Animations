@@ -1,0 +1,79 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the entire body of the webpage */
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+/* Creating a shadow effect */
+.shadow {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+  background: linear-gradient(rgb(50, 49, 49), rgb(0, 0, 0));
+}
+
+/* Adding gradient shadows on top and bottom */
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background: linear-gradient(
+    45deg,
+    #7f00ff,
+    #4b0082,
+    #0000ff,
+    #008000,
+    #ffff00,
+    #ffa500,
+    #ff0000,
+    #ff0000,
+    #ffa500,
+    #ffff00,
+    #008000,
+    #0000ff,
+    #4b0082,
+    #7f00ff
+  );
+  background-size: 400%;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 100%;
+  z-index: -1;
+  animation: animate 5s linear infinite alternate; /* Applying animation */
+}
+
+/* Adding blur effect to the bottom shadow */
+.shadow::after {
+  filter: blur(30px);
+}
+
+/* Defining animation keyframes */
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Styling for paragraphs */
+p {
+  color: white;
+}

@@ -1,0 +1,71 @@
+/* Resetting default margin, padding, and box sizing for all elements */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling for the entire body of the webpage */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+/* Styling for the main heading */
+h1 {
+  position: relative;
+  font-size: 6rem;
+  color: white;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgb(0, 0, 0)); /* Creating a reflection effect */
+  line-height: 65px;
+  outline: none;
+  /* animation: animateNormal 2s linear infinite alternate;  */
+  animation: animateTubelight 9s linear infinite;
+}
+
+/* Keyframes animation for normal glow */
+@keyframes animateNormal {
+  0% {
+    color: white;
+    text-shadow: 0 0 5px aqua;
+  }
+  100% {
+    color: white;
+    text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua;
+  }
+}
+
+/* Keyframes animation for tube light glow  */
+@keyframes animateTubelight {
+  0%,
+  15%,
+  20%,
+  40%,
+  60%,
+  65%,
+  80%,
+  85%,
+  100% {
+    color: white;
+    text-shadow: 0 0 2px aqua;
+  }
+  15.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65.1%,
+  80.1%,
+  100% {
+    color: white;
+    text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua;
+  }
+}

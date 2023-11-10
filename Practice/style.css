@@ -1,0 +1,31 @@
+
+.all_animation {
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+}
+
+
+
+.robot {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    &:active{
+        animation-play-state: paused;
+    }
+  }
+  @keyframes move{
+    to{
+      left: 400px;
+    }
+  }
+  .robot-paused{
+    animation-play-state: paused;
+  }

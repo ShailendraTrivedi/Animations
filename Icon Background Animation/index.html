@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Icon Background Animation</title>
+</head>
+
+<body>
+    <section id="background-section">
+    </section>
+
+    <script>
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const rowCount = 100;
+
+        const backgroundSection = document.getElementById('background-section');
+
+        for (let i = 0; i < rowCount; i++) {
+            const newRow = document.createElement('div');
+            newRow.classList.add('row');
+
+            for (let j = 0; j < 4; j++) {
+                for (let char of characters) {
+                    const newChar = document.createElement('p');
+                    newChar.textContent = char;
+                    newRow.appendChild(newChar);
+                }
+            }
+
+            backgroundSection.appendChild(newRow);
+        }
+    </script>
+</body>
+
+</html>

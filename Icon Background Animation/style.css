@@ -1,0 +1,44 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the entire section of the webpage */
+section {
+  position: relative;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Styling for a row of elements */
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+/* Styling for paragraphs */
+p {
+  color: black;
+  transition: 1s; /* Adding a smooth transition effect */
+  cursor: pointer;
+  user-select: none; /* Preventing text selection on click */
+}
+
+/* Styling for paragraphs when hovered */
+p:hover {
+  transition: 0s; /* Removing the transition for instant effect */
+  color: greenyellow; /* Changing text color on hover */
+  /* Adding a text shadow effect on hover */
+  text-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px greenyellow,
+    0 0 40px greenyellow, 0 0 50px greenyellow, 0 0 60px greenyellow,
+    0 0 70px greenyellow, 0 0 80px greenyellow, 0 0 90px greenyellow,
+    0 0 100px greenyellow;
+}
